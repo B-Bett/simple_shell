@@ -59,7 +59,7 @@ ssize_t get_input(info_t *info)
 
 	_putchar(BUF_FLUSH);
 	r = input_buf(info, &buf, &len);
-	if (r == -1) 
+	if (r == -1)
 		return (-1);
 	if (len) /* we have commands left in the chain buffer */
 	{
@@ -82,10 +82,10 @@ ssize_t get_input(info_t *info)
 		}
 
 		*buf_p = p; /* pass back pointer to current command position */
-		return (_strlen(p)); 
+		return (_strlen(p));
 	}
 
-	*buf_p = buf; 
+	*buf_p = buf;
 	return (r); /* return length of buffer from _getline() */
 }
 
